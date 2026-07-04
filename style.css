@@ -218,8 +218,12 @@ margin:0 auto;
 
 .video-wrapper video{
 width:100%;
-aspect-ratio:16/9;
+max-width:600px;
+aspect-ratio:1/1;
 display:block;
+margin:0 auto;
+
+object-fit:cover;
 
 border:none;
 border-radius:clamp(14px,3vw,25px);
@@ -228,7 +232,6 @@ box-shadow:0 15px 40px rgba(0,0,0,.08);
 
 background:#000;
 }
-
 /* PRODUCTOS */
 
 .productos{
