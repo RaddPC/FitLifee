@@ -185,27 +185,6 @@ box-shadow:0 10px 30px rgba(209,93,153,.4);
 /* VIDEO (SECCION 3) */
 /* ========================= */
 
-.video-seccion{
-padding:90px 8%;
-text-align:center;
-background:#fff;
-}
-
-.video-seccion h2{
-font-size:2.5rem;
-color:#d15d99;
-margin-bottom:15px;
-}
-
-.video-seccion p{
-margin-bottom:35px;
-color:#666;
-}
-
-.video-wrapper{
-max-width:900px;
-margin:0 auto;
-}
 
 .video-wrapper video,
 .video-wrapper iframe{
