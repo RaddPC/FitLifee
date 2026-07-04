@@ -17,6 +17,26 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <body>
 
+<!-- ========================= -->
+<!-- BARRA SUPERIOR: MARCA + CARRITO -->
+<!-- ========================= -->
+<header class="navbar">
+
+    <div class="nav-marca">
+        <img src="./img/logo principal.png" alt="YeSeo Cosmetics" class="nav-logo">
+        <span class="nav-nombre">YeSeo Cosmetics</span>
+    </div>
+
+    <button class="nav-carrito" onclick="abrirCarrito()" aria-label="Abrir carrito de compras">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="carrito-contador" id="carritoContador">0</span>
+    </button>
+
+</header>
+
+<!-- ========================= -->
+<!-- SECCION 1: HERO -->
+<!-- ========================= -->
 <header class="hero">
 
 <div class="overlay">
@@ -29,6 +49,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 Hidratación, belleza y confianza en cada aplicación.
 </p>
 
+<div class="envio-badge">
+<i class="fas fa-truck"></i>
+Envíos a toda Colombia
+</div>
+
 <a href="#productos" class="btn">
 Ver Productos
 </a>
@@ -37,59 +62,126 @@ Ver Productos
 
 </header>
 
+<!-- ========================= -->
+<!-- SECCION 3: VIDEO -->
+<!-- ========================= -->
+<section class="video-seccion">
+
+    <h2>Conócenos en Video</h2>
+    <p>Descubre cómo cuidamos cada detalle de nuestros productos.</p>
+
+    <div class="video-wrapper">
+        <!--
+            AQUI VA EL VIDEO REAL:
+            Reemplaza este bloque placeholder por tu iframe de YouTube,
+            Instagram o Facebook. Ejemplo YouTube:
+            <iframe src="https://www.youtube.com/embed/TU_VIDEO_ID"
+                    allowfullscreen></iframe>
+        -->
+        <div class="video-placeholder">
+            <i class="fas fa-play-circle"></i>
+            <p>Video promocional próximamente</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- PRODUCTOS -->
+<!-- ========================= -->
 <section id="productos" class="productos">
 
-
+<h2>Nuestros Productos</h2>
 
 <div class="grid">
 
-<div class="card">
-<img src="./img/MANTEQUILLA.png" alt="">
+<div class="card"
+data-id="mantequilla"
+data-nombre="Mantequilla Corporal"
+data-precio="45000"
+data-imagen="./img/MANTEQUILLA.png">
+<img src="./img/MANTEQUILLA.png" alt="Mantequilla Corporal">
 <div class="contenido">
 <h3>Mantequilla Corporal</h3>
 <p>
 Vitamina E, colágeno y aceite de macadamia para una hidratación profunda.
 </p>
+<div class="precio">$45.000 COP</div>
+<button class="btn-comprar" onclick="agregarAlCarrito(this)">
+<i class="fas fa-cart-plus"></i> Agregar al carrito
+</button>
 </div>
 </div>
 
-<div class="card">
-<img src="./img/JABON INTIMO.png" alt="">
+<div class="card"
+data-id="jabon"
+data-nombre="Jabón Íntimo"
+data-precio="25000"
+data-imagen="./img/JABON INTIMO.png">
+<img src="./img/JABON INTIMO.png" alt="Jabón Íntimo">
 <div class="contenido">
 <h3>Jabón Íntimo</h3>
 <p>
 Protección, frescura y equilibrio para tu cuidado diario.
 </p>
+<div class="precio">$25.000 COP</div>
+<button class="btn-comprar" onclick="agregarAlCarrito(this)">
+<i class="fas fa-cart-plus"></i> Agregar al carrito
+</button>
 </div>
 </div>
 
-<div class="card">
-<img src="./img/SHAMPOO.png" alt="">
+<div class="card"
+data-id="shampoo"
+data-nombre="Shampoo para Mujer"
+data-precio="38000"
+data-imagen="./img/SHAMPOO.png">
+<img src="./img/SHAMPOO.png" alt="Shampoo para Mujer">
 <div class="contenido">
 <h3>Shampoo para Mujer</h3>
 <p>
 Limpieza suave, brillo natural y nutrición para tu cabello.
 </p>
+<div class="precio">$38.000 COP</div>
+<button class="btn-comprar" onclick="agregarAlCarrito(this)">
+<i class="fas fa-cart-plus"></i> Agregar al carrito
+</button>
 </div>
 </div>
 
-<div class="card">
-<img src="./img/ACONDICIONA.png" alt="">
+<div class="card"
+data-id="acondicionador"
+data-nombre="Acondicionador Mujer"
+data-precio="38000"
+data-imagen="./img/ACONDICIONA.png">
+<img src="./img/ACONDICIONA.png" alt="Acondicionador Mujer">
 <div class="contenido">
 <h3>Acondicionador Mujer</h3>
 <p>
 Suavidad, nutrición y brillo intenso con colágeno.
 </p>
+<div class="precio">$38.000 COP</div>
+<button class="btn-comprar" onclick="agregarAlCarrito(this)">
+<i class="fas fa-cart-plus"></i> Agregar al carrito
+</button>
 </div>
 </div>
 
-<div class="card">
-<img src="./img/MASCOTAS.png" alt="">
+<div class="card"
+data-id="mascotas"
+data-nombre="Shampoo Mascotas"
+data-precio="32000"
+data-imagen="./img/MASCOTAS.png">
+<img src="./img/MASCOTAS.png" alt="Shampoo Mascotas">
 <div class="contenido">
 <h3>Shampoo Mascotas</h3>
 <p>
 Limpieza profunda y pelaje saludable para perros y gatos.
 </p>
+<div class="precio">$32.000 COP</div>
+<button class="btn-comprar" onclick="agregarAlCarrito(this)">
+<i class="fas fa-cart-plus"></i> Agregar al carrito
+</button>
 </div>
 </div>
 
@@ -97,6 +189,245 @@ Limpieza profunda y pelaje saludable para perros y gatos.
 
 </section>
 
+<!-- ========================= -->
+<!-- BANNERS INFORMATIVOS (2 POR PRODUCTO) -->
+<!-- ========================= -->
+<section class="informativas">
+
+<div class="info-banner">
+    <img src="./img/MANTEQUILLA.png" alt="Mantequilla Corporal - Beneficios">
+    <div class="info-texto">
+        <h3>Hidratación que se nota</h3>
+        <p>Enriquecida con vitamina E, colágeno y aceite de macadamia, nuestra mantequilla corporal deja tu piel suave, nutrida y con un aroma delicado que dura todo el día.</p>
+    </div>
+</div>
+
+<div class="info-banner reverso">
+    <img src="./img/MANTEQUILLA.png" alt="Mantequilla Corporal - Modo de uso">
+    <div class="info-texto">
+        <h3>Modo de uso</h3>
+        <p>Aplica sobre piel limpia con un suave masaje circular, de preferencia después del baño, para sellar la hidratación y potenciar sus beneficios.</p>
+    </div>
+</div>
+
+<div class="info-banner">
+    <img src="./img/JABON INTIMO.png" alt="Jabón Íntimo - Beneficios">
+    <div class="info-texto">
+        <h3>Cuidado íntimo diario</h3>
+        <p>Formulado para respetar el pH natural, nuestro jabón íntimo brinda frescura, protección y equilibrio durante todo el día, sin resecar la piel.</p>
+    </div>
+</div>
+
+<div class="info-banner reverso">
+    <img src="./img/JABON INTIMO.png" alt="Jabón Íntimo - Modo de uso">
+    <div class="info-texto">
+        <h3>Modo de uso</h3>
+        <p>Úsalo a diario en el momento del baño. Su fórmula suave está pensada para piel sensible y no altera tu equilibrio natural.</p>
+    </div>
+</div>
+
+<div class="info-banner">
+    <img src="./img/SHAMPOO.png" alt="Shampoo para Mujer - Beneficios">
+    <div class="info-texto">
+        <h3>Brillo y nutrición desde la raíz</h3>
+        <p>Una limpieza suave que respeta tu cabello, aportando brillo natural y nutrición desde la raíz hasta las puntas en cada lavado.</p>
+    </div>
+</div>
+
+<div class="info-banner reverso">
+    <img src="./img/SHAMPOO.png" alt="Shampoo para Mujer - Modo de uso">
+    <div class="info-texto">
+        <h3>Modo de uso</h3>
+        <p>Aplica sobre cabello húmedo, masajea el cuero cabelludo y enjuaga. Combínalo con el acondicionador YeSeo para mejores resultados.</p>
+    </div>
+</div>
+
+<div class="info-banner">
+    <img src="./img/ACONDICIONA.png" alt="Acondicionador Mujer - Beneficios">
+    <div class="info-texto">
+        <h3>Suavidad con colágeno</h3>
+        <p>El colágeno en su fórmula ayuda a desenredar y fortalecer tu cabello desde la primera aplicación, dejando un brillo intenso.</p>
+    </div>
+</div>
+
+<div class="info-banner reverso">
+    <img src="./img/ACONDICIONA.png" alt="Acondicionador Mujer - Modo de uso">
+    <div class="info-texto">
+        <h3>Modo de uso</h3>
+        <p>Aplica de medios a puntas después del shampoo, deja actuar unos minutos y enjuaga con abundante agua.</p>
+    </div>
+</div>
+
+<div class="info-banner">
+    <img src="./img/MASCOTAS.png" alt="Shampoo Mascotas - Beneficios">
+    <div class="info-texto">
+        <h3>Pensado para tu mascota</h3>
+        <p>Limpieza profunda y segura para perros y gatos, dejando su pelaje suave, brillante y con un aroma fresco que dura días.</p>
+    </div>
+</div>
+
+<div class="info-banner reverso">
+    <img src="./img/MASCOTAS.png" alt="Shampoo Mascotas - Modo de uso">
+    <div class="info-texto">
+        <h3>Modo de uso</h3>
+        <p>Humedece a tu mascota, aplica el shampoo con masajes suaves evitando ojos y oídos, y enjuaga completamente.</p>
+    </div>
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- PREGUNTAS Y RESPUESTAS -->
+<!-- ========================= -->
+<section class="faq">
+
+    <h2>Preguntas Frecuentes</h2>
+
+    <div class="faq-lista">
+
+        <div class="faq-item">
+            <button class="faq-pregunta" onclick="toggleFaq(this)">
+                ¿Hacen envíos a todo Colombia?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-respuesta">
+                <p>Sí, realizamos envíos a nivel nacional a través de transportadoras aliadas. El tiempo de entrega varía entre 2 y 7 días hábiles según la ciudad de destino.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-pregunta" onclick="toggleFaq(this)">
+                ¿Cómo puedo pagar mi pedido?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-respuesta">
+                <p>Coordinamos el pago directamente por WhatsApp una vez confirmamos tu pedido y el valor total, incluyendo el envío.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-pregunta" onclick="toggleFaq(this)">
+                ¿Sus productos cuentan con registro INVIMA?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-respuesta">
+                <p>Sí, contamos con registro INVIMA NSOC05994-21CO, lo que respalda la calidad y seguridad de nuestros productos.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-pregunta" onclick="toggleFaq(this)">
+                ¿Puedo ser distribuidor de YeSeo Cosmetics?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-respuesta">
+                <p>¡Claro! Escríbenos por WhatsApp y con gusto te contamos sobre precios especiales para distribuidores.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-pregunta" onclick="toggleFaq(this)">
+                ¿Qué hago si mi producto llega dañado?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-respuesta">
+                <p>Contáctanos dentro de las 48 horas siguientes a la entrega y gestionamos el cambio o la devolución correspondiente.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- CHECKOUT SIMPLE POR WHATSAPP -->
+<!-- ========================= -->
+<section id="checkout" class="checkout">
+
+    <h2>Finaliza tu Pedido</h2>
+    <p>Revisa tu carrito y envíanos tu pedido directamente por WhatsApp.</p>
+
+    <div class="checkout-caja">
+
+        <div id="checkoutVacio" class="checkout-vacio">
+            <i class="fas fa-cart-arrow-down"></i>
+            <p>Tu carrito está vacío.</p>
+            <a href="#productos" class="btn">Ver productos</a>
+        </div>
+
+        <div id="checkoutLista" class="checkout-lista"></div>
+
+        <div id="checkoutResumen" class="checkout-resumen">
+            <div class="checkout-total">
+                Total: <span id="checkoutTotal">$0 COP</span>
+            </div>
+            <a id="checkoutWhatsapp" href="#" target="_blank" class="btn-whatsapp checkout-btn">
+                <i class="fab fa-whatsapp"></i> Enviar Pedido por WhatsApp
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- SELLOS DE CONFIANZA -->
+<!-- ========================= -->
+<section class="confianza">
+
+    <div class="sello">
+        <i class="fas fa-shield-alt"></i>
+        <div>
+            <h4>Registro INVIMA</h4>
+            <p>NSOC05994-21CO</p>
+        </div>
+    </div>
+
+    <div class="sello">
+        <i class="fas fa-truck-fast"></i>
+        <div>
+            <h4>Envíos a Nivel Nacional</h4>
+            <p>Entregamos en toda Colombia</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- RESEÑAS DE CLIENTES -->
+<!-- ========================= -->
+<section class="resenas">
+
+    <h2>Lo Que Dicen Nuestras Clientas</h2>
+    <p class="resenas-nota">*Reseñas de ejemplo — reemplázalas por las de tus clientes reales.</p>
+
+    <div class="resenas-grid">
+
+        <div class="resena-card">
+            <div class="estrellas"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>"La mantequilla corporal es maravillosa, mi piel quedó súper hidratada desde el primer uso."</p>
+            <span class="resena-nombre">María F.</span>
+        </div>
+
+        <div class="resena-card">
+            <div class="estrellas"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>"Compré el shampoo para mascotas y mi perrita quedó con el pelaje brillante y sin malos olores."</p>
+            <span class="resena-nombre">Carlos R.</span>
+        </div>
+
+        <div class="resena-card">
+            <div class="estrellas"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>"Excelente atención por WhatsApp, el envío llegó rápido y el jabón íntimo es justo lo que buscaba."</p>
+            <span class="resena-nombre">Daniela G.</span>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- CONTACTO (SIN CAMBIOS) -->
+<!-- ========================= -->
 <section class="contacto">
 
 <h2>¿Quieres Distribuir Nuestros Productos?</h2>
@@ -122,7 +453,8 @@ class="float">
 <i class="fab fa-whatsapp"></i>
 
 </a>
-<!-- FOOTER -->
+
+<!-- FOOTER (SIN CAMBIOS) -->
 <footer class="footer">
 
     <div class="social-container">
@@ -153,6 +485,20 @@ class="float">
 
     </div>
 
+    <div class="footer-links">
+
+        <button class="link-politica" onclick="abrirModalPolitica('privacidad')">
+            Política de Privacidad
+        </button>
+
+        <span class="separador">|</span>
+
+        <button class="link-politica" onclick="abrirModalPolitica('envio')">
+            Política de Envío
+        </button>
+
+    </div>
+
     <div class="copyright">
 
         <p>
@@ -166,5 +512,80 @@ class="float">
     </div>
 
 </footer>
+
+<!-- ========================= -->
+<!-- CARRITO DE COMPRAS (PANEL LATERAL) -->
+<!-- ========================= -->
+<div id="carritoOverlay" class="carrito-overlay">
+    <div class="carrito-panel">
+
+        <div class="carrito-header">
+            <h3><i class="fas fa-shopping-cart"></i> Tu Carrito</h3>
+            <button class="modal-cerrar" onclick="cerrarCarrito()">&times;</button>
+        </div>
+
+        <div id="carritoVacioMsg" class="carrito-vacio-msg">
+            <i class="fas fa-cart-arrow-down"></i>
+            <p>Aún no has agregado productos.</p>
+        </div>
+
+        <div id="carritoItems" class="carrito-items"></div>
+
+        <div id="carritoFooter" class="carrito-footer">
+            <div class="carrito-total">
+                Total: <span id="carritoTotal">$0 COP</span>
+            </div>
+            <a href="#checkout" class="btn" onclick="cerrarCarrito()">Ir a Finalizar Pedido</a>
+        </div>
+
+    </div>
+</div>
+
+<!-- MODAL POLITICA DE PRIVACIDAD -->
+<div id="modalPrivacidad" class="modal-overlay">
+    <div class="modal-box modal-texto">
+        <button class="modal-cerrar" onclick="cerrarModal('modalPrivacidad')">&times;</button>
+        <h3>Política de Privacidad</h3>
+        <div class="modal-scroll">
+            <p>En YeSeo Cosmetics valoramos y protegemos tus datos personales de acuerdo con la Ley 1581 de 2012 y el Decreto 1377 de 2013 sobre Protección de Datos Personales en Colombia.</p>
+
+            <p><strong>1. Datos que recolectamos:</strong> nombre, teléfono, dirección de entrega y correo electrónico, únicamente cuando nos los suministras voluntariamente para gestionar un pedido o una solicitud de distribución.</p>
+
+            <p><strong>2. Finalidad:</strong> usamos tu información exclusivamente para procesar pedidos, coordinar envíos, brindarte atención al cliente y enviarte novedades sobre nuestros productos, siempre que hayas autorizado este uso.</p>
+
+            <p><strong>3. Confidencialidad:</strong> tus datos no se venden ni se comparten con terceros no autorizados. Solo se comparten con transportadoras cuando es necesario para completar la entrega de tu pedido.</p>
+
+            <p><strong>4. Tus derechos:</strong> como titular de tus datos, puedes conocer, actualizar, rectificar o solicitar la eliminación de tu información en cualquier momento, escribiéndonos por WhatsApp o a nuestras redes sociales.</p>
+
+            <p><strong>5. Seguridad:</strong> implementamos medidas razonables para proteger tu información contra pérdida, uso indebido o acceso no autorizado.</p>
+
+            <p>Al realizar una compra o dejarnos tus datos de contacto, aceptas el tratamiento de tu información conforme a esta política.</p>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL POLITICA DE ENVIO -->
+<div id="modalEnvio" class="modal-overlay">
+    <div class="modal-box modal-texto">
+        <button class="modal-cerrar" onclick="cerrarModal('modalEnvio')">&times;</button>
+        <h3>Política de Envío</h3>
+        <div class="modal-scroll">
+            <p><strong>1. Cobertura:</strong> realizamos envíos a nivel nacional en Colombia a través de transportadoras aliadas.</p>
+
+            <p><strong>2. Tiempos de entrega:</strong> los pedidos se despachan entre 1 y 3 días hábiles después de confirmado el pago o el acuerdo de compra. El tiempo de entrega varía entre 2 y 7 días hábiles dependiendo de la ciudad de destino.</p>
+
+            <p><strong>3. Costo de envío:</strong> el valor del envío se calcula según el destino y se informa antes de confirmar tu pedido por WhatsApp.</p>
+
+            <p><strong>4. Seguimiento:</strong> una vez despachado tu pedido, te compartimos el número de guía para que puedas hacer seguimiento con la transportadora.</p>
+
+            <p><strong>5. Derecho de retracto:</strong> de acuerdo con el Estatuto del Consumidor (Ley 1480 de 2011), cuentas con 5 días hábiles después de recibir tu pedido para solicitar su devolución, siempre que el producto conserve su empaque original y no haya sido usado.</p>
+
+            <p><strong>6. Novedades en la entrega:</strong> si tu pedido llega dañado o incompleto, contáctanos dentro de las 48 horas siguientes a la entrega para gestionar el cambio o la devolución correspondiente.</p>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
