@@ -6,7 +6,7 @@ document.querySelectorAll('a').forEach(link => {
 });
 
 // Número de WhatsApp del negocio
-const NUMERO_WHATSAPP = '573104561639';
+const NUMERO_WHATSAPP = '573332420240';
 
 // Carrito de compras (persistido en el navegador del cliente)
 let carrito = JSON.parse(localStorage.getItem('yeseo_carrito')) || [];
