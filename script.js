@@ -38,8 +38,16 @@ function agregarAlCarrito(boton) {
         existente.cantidad += 1;
     } else {
         carrito.push({ id, nombre, precio, imagen, cantidad: 1 });
+}
+// Meta Pixel: registrar evento AddToCart
+    if (typeof fbq === 'function') {
+        fbq('track', 'AddToCart', {
+            content_name: nombre,
+            content_ids: [id],
+            value: precio,
+            currency: 'COP'
+        });
     }
-
     guardarCarrito();
 
     // Pequeña confirmación visual en el botón
