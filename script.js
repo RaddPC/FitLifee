@@ -189,6 +189,15 @@ function renderizarTodo() {
 function abrirCarrito() {
     document.getElementById('carritoOverlay').classList.add('activo');
     document.body.style.overflow = 'hidden';
+
+    // Meta Pixel: registrar evento InitiateCheckout
+    if (typeof fbq === 'function' && carrito.length > 0) {
+        fbq('track', 'InitiateCheckout', {
+            value: calcularTotal(),
+            currency: 'COP',
+            num_items: carrito.reduce((suma, item) => suma + item.cantidad, 0)
+        });
+    }
 }
 
 function cerrarCarrito() {
