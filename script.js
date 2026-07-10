@@ -142,6 +142,7 @@ function renderizarCheckout() {
     const resumen = document.getElementById('checkoutResumen');
     const totalEl = document.getElementById('checkoutTotal');
     const linkWhatsapp = document.getElementById('checkoutWhatsapp');
+    
 
     if (!lista) return;
 
@@ -176,6 +177,15 @@ function renderizarCheckout() {
 
     totalEl.textContent = formatearPrecio(calcularTotal());
     linkWhatsapp.href = `https://wa.me/${NUMERO_WHATSAPP}?text=${construirMensajeWhatsapp()}`;
+    // Meta Pixel: registrar evento Contact al hacer clic en "Pedir por WhatsApp"
+    linkWhatsapp.onclick = function () {
+        if (typeof fbq === 'function') {
+            fbq('track', 'Contact', {
+                value: calcularTotal(),
+                currency: 'COP'
+            });
+        }
+    };
 }
 
 // Renderiza todas las vistas que dependen del carrito
